@@ -1,5 +1,7 @@
+import './Topbar.scss';
+
 export default function about() {
-  const aboutElement = (
+  const topbarElement = (
     <ul>
       <li>Home</li>
       <li>About</li>
