@@ -1,23 +1,24 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
+.navMenu {
   float: right;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+.navMenu a {
+  color: #e76ddd;
   text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  padding: 10px;
 }
 
-li a:hover {
-  background-color: #111;
+.navMenu a:hover {
+  color: #c006b0;
+}
+
+.navMenu a:active {
+  text-decoration: dotted;
+  color: #c006b0;
 }
