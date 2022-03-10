@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.css';
-import Topbar from './topbar/Topbar';
+import TopHeader from './topbar/TopHeader';
 
 export default function App() {
   return (
     <div>
-      <Topbar></Topbar>
+      <TopHeader />
     </div>
   );
 }
