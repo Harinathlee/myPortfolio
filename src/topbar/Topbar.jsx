@@ -4,7 +4,10 @@ import './Topbar.scss';
 export default function about() {
   const topbarNav = (
     <div>
-     <img src="" alt="">
+      <img
+        src="https://cdn.jsdelivr.net/gh/Harinathlee/myPortfolio@master/src/topbar/Know_Me-removebg-preview.png"
+        alt=""
+      />
 
       <nav class="navMenu">
         <a href="#">Home</a>
