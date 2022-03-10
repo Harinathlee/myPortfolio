@@ -4,7 +4,7 @@ import './Topbar.scss';
 export default function about() {
   const topbarNav = (
     <div>
-      <h2 class="Title">KnowMe</h2>
+     <img src="" alt="">
 
       <nav class="navMenu">
         <a href="#">Home</a>
