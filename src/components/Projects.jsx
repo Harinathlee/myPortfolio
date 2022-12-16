@@ -1,36 +1,47 @@
-import React from "react";
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
-
+import React, { useState } from "react";
+import lovecalculator from "../assets/projects/lovecalculator.png";
+import upoint_query_builder from "../assets/projects/upoint-query-builder.png";
+import knowmelee from "../assets/projects/knowme-lee.png";
+import "../style.css";
 const Projects = () => {
+  const [hovered, setHovered] = useState(false);
+  function onMouseEnterHandler() {
+    setHovered(true);
+  }
+
+  function onMouseLeaveHandler() {
+    setHovered(false);
+  }
   const projects = [
     {
       id: 1,
-      src: arrayDestruct,
+      name: "Lee-Love Calculator",
+      description:
+        "This is website is an online form of a childhood game FLAMES we used to play to find out the relationship between 2 persons.",
+      image: lovecalculator,
+      technologies: ["HTML", "CSS", "Java Script", "BootStarp"],
+      benifites:
+        "This is just a fun game which I developed to practise my web developement skills.",
     },
     {
       id: 2,
-      src: reactParallax,
+      name: "Upoint-SQL Querey Builder",
+      description:
+        "This is website is an online form of a childhood game FLAMES we used to play to find out the relationship between 2 persons.",
+      image: upoint_query_builder,
+      technologies: ["ReactJS", "CSS", "Java Script", "BootStarp"],
+      benifites:
+        "This is just a fun game which I developed to practise my web developement skills.",
     },
     {
       id: 3,
-      src: navbar,
-    },
-    {
-      id: 4,
-      src: reactSmooth,
-    },
-    {
-      id: 5,
-      src: installNode,
-    },
-    {
-      id: 6,
-      src: reactWeather,
+      name: "KnowMe - myPortfolio",
+      description:
+        "This is website is an online form of a childhood game FLAMES we used to play to find out the relationship between 2 persons.",
+      image: knowmelee,
+      technologies: ["HTML", "CSS", "Java Script", "BootStarp"],
+      benifites:
+        "This is just a fun game which I developed to practise my web developement skills.",
     },
   ];
 
@@ -48,70 +59,69 @@ const Projects = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 grid-rows-1">
-          <div class="max-w-sm overflow-hidden shadow-lg bg-gradient-to-tr from-cyan-600 via-sky-600 to-blue-600 rounded-lg">
-            <img
-              class="w-full"
-              src={projects[1].src}
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gradient-to-tr from-cyan-600 via-sky-600 to-blue-600 ">
-            <img
-              class="w-full"
-              src={projects[1].src}
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
-          <div class="max-w-sm rounded overflow-hidden shadow-lg bg-gradient-to-tr from-cyan-600 via-sky-600 to-blue-600 ">
-            <img
-              class="w-full"
-              src={projects[1].src}
-              alt="Sunset in the mountains"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-            </div>
-            <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #photography
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #travel
-              </span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #winter
-              </span>
-            </div>
-          </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 px-12 sm:px-0">
+          {projects.map((project) => (
+            <a
+              class="relative block w-full bg-gradient-to-tr group h-52"
+              href="#d"
+            >
+              <div
+                class=" max-w-sm overflow-hidden shadow-sm bg-gradient-to-tr from-blue-500   to-indigo-600 shadow-indigo-400  rounded-lg h-96"
+                key={project.id}
+                onMouseOver={onMouseEnterHandler}
+                onMouseOut={onMouseLeaveHandler}
+              >
+                {hovered ? (
+                  <div class="p-4 transition-all transform translate-y-12 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 duration-1000">
+                  
+                      <div className="py-4">
+                        <button className="bg-slate-900 text-white text-center font-bold py-2 px-4 rounded-full float-right">
+                          Code
+                        </button>
+                        <button className="bg-orange-500 text-white text-center font-bold py-2 px-4 rounded-full float-left">
+                          <a href="https://lee-lovecalculator.netlify.app">
+                            Live
+                          </a>{" "}
+                        </button>
+                      </div>
+                      <div class="mt-10">
+                        <div class="p-2">
+                          <p class="font-Open_Sans font-bold text-white">
+                            {project.description}
+                          </p>
+                        </div>
+                        <div class="p-2">
+                          <p class="font-Open_Sans font-bold text-white">
+                            {project.benifites}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                ) : (
+                  <>
+                    <img
+                      src={project.image}
+                      alt="projimg"
+                      srcset=""
+                      className="w-full"
+                    />
+                    <div class="px-6 py-2">
+                      <div class="font-bold text-xl mb-2">{project.name}</div>
+                    </div>
+
+                    <div class="px-6 pt-2 pb-2">
+                      {project.technologies.map((tech) => (
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
