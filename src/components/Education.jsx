@@ -15,7 +15,7 @@ function Education() {
       course: "Master of Technology",
       branch: "Software Engieering",
       year: "2019 - 2022",
-      score: "72%",
+      score: "7.2",
       logo : bits
     },
     {
@@ -24,7 +24,7 @@ function Education() {
       course: "Bachelore of Science",
       branch: "Computer Science",
       year: "2015 - 2018",
-      score: "86%",
+      score: "8.6",
       logo : svu
     },
   ];
@@ -43,6 +43,7 @@ function Education() {
             date={year}
             iconStyle={{ background: "#6D67E4", color: "#fff" }}
             icon={<TbSchool />}
+            key={id}
           >
             <h3 className="vertical-timeline-element-title text-xl font-bold text-[#6D67E4]">
               {course}
@@ -52,11 +53,16 @@ function Education() {
               {branch}
             </h4>
             <div className="float-left pr-4 pt-2">
-              <img src={logo} alt="bits" className="w-10 mx-auto" />
+              <img src={logo} alt="bits" className="w-10 mx-auto mt-3" />
             </div>
             <div>
               <p className="vertical-timeline-element-subtitle text-slate-900">
                 {institute}
+              </p>
+            </div>
+            <div>
+              <p className="vertical-timeline-element-subtitle text-indigo-500">
+                CGPA: {score}
               </p>
             </div>
           </VerticalTimelineElement>

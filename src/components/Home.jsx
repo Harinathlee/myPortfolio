@@ -1,11 +1,12 @@
 import React from "react";
-import HeroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/heroImage1.png";
 import Namasthey from "../assets/namaste.png";
 
 //import { BsFillFileArrowDownFill } from "react-icons/bs";
 import Resume from "../assets/docs/Harinath's Resume.pdf";
 import download from "../assets/download.gif";
-
+import "../style.css";
+import Typewriter from "typewriter-effect";
 const Home = () => {
   return (
     <section
@@ -35,7 +36,17 @@ const Home = () => {
             />
             <div>This is Harinath</div>
           </h2>
-          <h3 className="text-gray-400">Web Developer</h3>
+
+          <h3 className="text-gray-300 font-Cassandra font-semibold ">
+            <Typewriter
+              options={{
+                strings: ["Web Developer", "Video Editor","Writer"],
+                autoStart: true,
+                loop: true,
+                delay: 50
+              }}
+            />
+          </h3>
           <p className="text-gray-300 py-4 max-w-md">
             I am a desperate developer who is looking for an opportunity to
             achieve big goals in my career and improve my expertise
@@ -46,7 +57,7 @@ const Home = () => {
             <a
               href={Resume}
               download={true}
-              smooth
+              smooth={true}
               duration={500}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg"
             >
@@ -66,7 +77,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
+            className="rounded-2xl mx-auto w-80"
           />
         </div>
       </div>

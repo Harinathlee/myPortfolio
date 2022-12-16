@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import whatsapp from "../assets/whatsapp.png";
 import email from "../assets/email.png";
 import location from "../assets/location.png";
@@ -6,8 +6,35 @@ import instagram from "../assets/instagram.png";
 import stackoverflow from "../assets/stack-overflow.png";
 import discord from "../assets/discord.png";
 import naukri from "../assets/naukri.png";
-
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+  const [mailStatus, setMailStatus] = useState("message not sent");
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "outlook_mail",
+        "outlook_template",
+        form.current,
+        "RnYWQfOD57-pswRRM"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+          setMailStatus("message sent");
+          console.log(mailStatus);
+        },
+        (error) => {
+          console.log(error.text);
+          setMailStatus("message not sent");
+          console.log(mailStatus);
+        }
+      );
+
+  };
   const contacts = [
     {
       id: 1,
@@ -91,7 +118,7 @@ const Contact = () => {
         </div>
 
         <div className="rounded-xl shadow-lg shadow-blue-400 px-8 py-2 mt-6 bg-blue-500 text-white  flex flex-col justify-between">
-          <form className="mt-6">
+          <form className="mt-6" ref={form} onSubmit={sendEmail}>
             <div className="mb-2">
               <label>
                 <span
@@ -102,7 +129,7 @@ const Contact = () => {
                 </span>
                 <input
                   type="text"
-                  name="name"
+                  name="user_name"
                   className="
                   text-black
             w-full
@@ -128,7 +155,7 @@ const Contact = () => {
                   Email address:
                 </span>
                 <input
-                  name="email"
+                  name="user_email"
                   type="email"
                   className="
                   text-black
@@ -158,7 +185,7 @@ const Contact = () => {
                 </span>
                 <input
                   type="text"
-                  name="name"
+                  name="subject"
                   className="
                   text-black
             w-full
@@ -204,7 +231,7 @@ const Contact = () => {
               </label>
             </div>
 
-            <div class="mb-6">
+            <div className="mb-6">
               <button
                 type="submit"
                 className="
