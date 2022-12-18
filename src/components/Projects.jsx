@@ -39,7 +39,7 @@ const Projects = () => {
       description:
         "This is website is an online form of a childhood game FLAMES we used to play to find out the relationship between 2 persons.",
       image: knowmelee,
-      technologies: ["HTML", "React JS","SCSS", "Tailwind CSS"],
+      technologies: ["HTML", "React JS", "SCSS", "Tailwind CSS"],
       benifites:
         "This is just a fun game which I developed to practise my web developement skills.",
     },
@@ -61,7 +61,6 @@ const Projects = () => {
             read short description of it and view the hosted Live site and the
             source code in GitHub.
           </p>
-          
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 px-12 sm:px-0">
@@ -69,11 +68,11 @@ const Projects = () => {
             <a
               className="relative block w-full bg-gradient-to-tr group h-52"
               href="#d"
+              key={project.id}
             >
               <div
                 className=" max-w-sm overflow-hidden shadow-sm bg-gradient-to-tr from-blue-500   to-indigo-600 shadow-indigo-400  rounded-lg h-96"
-                key={project.id}
-                onMouseOver={onMouseEnterHandler}
+                onMouseEnter={onMouseEnterHandler}
                 onMouseOut={onMouseLeaveHandler}
               >
                 {hovered ? (
@@ -85,7 +84,7 @@ const Projects = () => {
                       <button className="bg-orange-500 text-white text-center font-bold py-2 px-4 rounded-full float-left">
                         <a href="https://lee-lovecalculator.netlify.app">
                           Live
-                        </a>{" "}
+                        </a>
                       </button>
                     </div>
                     <div className="mt-10">
@@ -110,7 +109,9 @@ const Projects = () => {
                       className="w-full"
                     />
                     <div className="px-6 py-2">
-                      <div className="font-bold text-xl mb-2">{project.name}</div>
+                      <div className="font-bold text-xl mb-2">
+                        {project.name}
+                      </div>
                     </div>
 
                     <div className="px-6 pt-2 pb-2">
