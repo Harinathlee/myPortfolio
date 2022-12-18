@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/heroImage1.png";
+import HeroImage from "../assets/heroImage2.png";
 import Namasthey from "../assets/namaste.png";
 
 //import { BsFillFileArrowDownFill } from "react-icons/bs";
@@ -34,23 +34,26 @@ const Home = () => {
               alt="namasthey"
               className="inline h-12 w-12 hover:w-15 hover:h-15"
             />
-            <div>This is Harinath</div>
+            <div>
+              This is <span className="underline">Harinath</span>
+            </div>
           </h2>
 
-          <h3 className="text-gray-300 font-Cassandra font-semibold ">
+          <h3 className="text-gray-300 font-Cassandra font-semibold text-lg">
             <Typewriter
               options={{
-                strings: ["Web Developer", "Video Editor","Writer"],
+                strings: ["Web Developer", "Video Editor"],
                 autoStart: true,
                 loop: true,
-                delay: 50
+                delay: 50,
               }}
             />
           </h3>
           <p className="text-gray-300 py-4 max-w-md">
             I am a desperate developer who is looking for an opportunity to
             achieve big goals in my career and improve my expertise
-            time-to-time.
+            time-to-time.To know more about me you can scroll down or click on
+            the links on top.
           </p>
 
           <div className="w-auto">

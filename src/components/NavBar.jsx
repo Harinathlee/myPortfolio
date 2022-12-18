@@ -1,7 +1,6 @@
 import logo from "../assets/anonymity.png";
 import React, { useState } from "react";
 import { useEffect } from "react";
-/*import {FaBars,FaTimes} from "react-icons/fa";*/
 import { Link } from "react-scroll";
 
 const NavBar = () => {
@@ -40,7 +39,7 @@ const NavBar = () => {
     {
       id: 7,
       link_name: "Testimonials",
-      link_url: "education",
+      link_url: "testimonials",
       active: false,
     },
     {
@@ -80,7 +79,6 @@ const NavBar = () => {
       </div>
       <ul className="hidden md:flex">
         {links.map((data) => {
-          console.log(data.link_url);
           return (
             <li key={data.id} className="px-4">
               <Link

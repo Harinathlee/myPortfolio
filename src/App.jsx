@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
+import Testinomials from "./components/Testinomials";
 
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
       <Skills />
       <Projects />
       <Education />
+      <Testinomials />
       <Contact />
     </div>
   );
