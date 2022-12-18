@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImage from "../assets/heroImage2.png";
-import Namasthey from "../assets/namaste.png";
 
+import Namasthey from "../assets/namaste.png";
+import webdev from "../assets/web-dev.gif";
 //import { BsFillFileArrowDownFill } from "react-icons/bs";
 import Resume from "../assets/docs/Harinath's Resume.pdf";
 import download from "../assets/download.gif";
@@ -49,13 +49,14 @@ const Home = () => {
               }}
             />
           </h3>
-          <p className="text-gray-300 py-4 max-w-md">
-            I am a desperate developer who is looking for an opportunity to
-            achieve big goals in my career and improve my expertise
-            time-to-time.To know more about me you can scroll down or click on
-            the links on top.
+          <p className="text-gray-300 pt-4 max-w-md">
+            I am a developer who enjoys coding. For others it may look like I am
+            coding , but for me it feels like playing music in piano.
           </p>
-
+          <p className="text-gray-300 py-2  max-w-md">
+            To know more about my expertise scroll down or click on any section
+            on top of the page.
+          </p>
           <div className="w-auto">
             <a
               href={Resume}
@@ -78,9 +79,9 @@ const Home = () => {
 
         <div>
           <img
-            src={HeroImage}
+            src={webdev}
             alt="my profile"
-            className="rounded-2xl mx-auto w-80"
+            className="rounded-2xl mx-auto w-[400px] ml-10"
           />
         </div>
       </div>
