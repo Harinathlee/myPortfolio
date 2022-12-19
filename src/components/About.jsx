@@ -5,12 +5,12 @@ const About = () => {
     <section
       id="about"
       name="about"
-      className="w-full h-screen bg-slate-900 p-4 text-white"
+      className="w-full h-auto p-4 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
-            About Me
+          <p className=" text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
+            <span>About </span> <span className="text-blue-400">Me</span>
           </p>
         </div>
         <div className="grid grid-cols-5 gap-8">
@@ -22,15 +22,13 @@ const About = () => {
               projects utilising these technologies, which are listed on the
               projects page.
             </p>
-
             <br />
-
             <p className="text-lg">
               I am presently working as a senior project engineer in wipro for
               the client Alight solutions as a Developer support. I analyse and
               update data in a database that is utilised for development
-              purposes, and I migrates code files from SVN to Bitbucket
-              (cloud service).
+              purposes, and I migrates code files from SVN to Bitbucket (cloud
+              service).
             </p>
             <br />
             <p className="text-lg ">
@@ -45,7 +43,7 @@ const About = () => {
             <img
               src={HeroImage}
               alt="my profile"
-              className="rounded-2xl mx-auto w-full"
+              className="rounded-2xl mx-auto w-[350px]  drop-shadow-md"
             />
           </div>
         </div>

@@ -5,7 +5,6 @@ import location from "../assets/location.png";
 import instagram from "../assets/instagram.png";
 import stackoverflow from "../assets/stack-overflow.png";
 import discord from "../assets/discord.png";
-import naukri from "../assets/naukri.png";
 import emailjs from "@emailjs/browser";
 const Contact = () => {
   const form = useRef();
@@ -33,7 +32,6 @@ const Contact = () => {
           console.log(mailStatus);
         }
       );
-
   };
   const contacts = [
     {
@@ -57,35 +55,33 @@ const Contact = () => {
       id: 1,
       logo: stackoverflow,
       name: "stackoverflow",
-    },
-    {
-      id: 2,
-      logo: naukri,
-      name: "naukri",
+      link:"https://stackoverflow.com/users/18469310/harinathlee"
     },
 
     {
       id: 3,
       logo: discord,
       name: "discord",
+      link:"https://discord.com/users/harinathlee#6335"
     },
-
+    
     {
       id: 4,
       logo: instagram,
       name: "instagram",
+      link: "https://www.instagram.com/harinath_lee/"
     },
   ];
   return (
     <section
       id="contact"
       name="contact"
-      className="w-full min-h-screen bg-slate-900 p-4 text-white font-Open_Sans"
+      className="w-full h-auto p-4 text-white font-Open_Sans"
     >
       <div className="max-w-screen-xl mt-10 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-2 mx-auto text-slate-50">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
-            Contact Me
+            <span>Contact </span> <span className="text-blue-400">Me</span>
           </p>
           <div className="flex flex-col justify-between space-y-4">
             <p className="py-6">
@@ -106,18 +102,20 @@ const Contact = () => {
             ))}
             <div className="mt-4 space-x-5 p-4">
               {sociallogos.map((data) => (
-                <img
-                  key={data.id}
-                  src={data.logo}
-                  alt={data.name}
-                  className="w-7 inline-flex hover:scale-110 cursor-pointer"
-                ></img>
+                <a href={data.link}>
+                  <img
+                    key={data.id}
+                    src={data.logo}
+                    alt={data.name}
+                    className="w-7 inline-flex hover:scale-110 cursor-pointer"
+                  ></img>
+                </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="rounded-xl shadow-lg shadow-blue-400 px-8 py-2 mt-6 bg-blue-500 text-white  flex flex-col justify-between">
+        <div className="rounded-xl shadow-2xl shadow-black px-8 py-2 mt-6 bg-blue-500 text-white  flex flex-col justify-between">
           <form className="mt-6" ref={form} onSubmit={sendEmail}>
             <div className="mb-2">
               <label>
@@ -234,21 +232,21 @@ const Contact = () => {
             <div className="mb-6">
               <button
                 type="submit"
-                className="
-            h-10
-            px-5
-            text-indigo-100
-            bg-indigo-700
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-            hover:scale-105
-            hover:font-bold
-          "
+                className="shadow-lg
+                shadow-black
+                h-10
+                px-5
+                text-indigo-100
+                bg-indigo-700
+                rounded-lg
+                transition-colors
+                duration-150
+                focus:shadow-outline
+                hover:bg-indigo-800
+                hover:scale-105
+                hover:font-bold"
               >
-                Contact Me
+                Send
               </button>
             </div>
             <div></div>

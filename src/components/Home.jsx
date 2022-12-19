@@ -12,7 +12,7 @@ const Home = () => {
     <section
       id="home"
       name="home"
-      className="h-screen w-full bg-gradient-to-b bg-slate-900"
+      className="h-screen w-full"
     >
       <div
         name="quote"
@@ -63,7 +63,7 @@ const Home = () => {
               download={true}
               smooth={true}
               duration={500}
-              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg"
+              className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg shadow-lg shadow-black"
             >
               <span>
                 <img

@@ -3,7 +3,7 @@ import lovecalculator from "../assets/projects/lovecalculator.png";
 import upoint_query_builder from "../assets/projects/upoint-query-builder.png";
 import knowmelee from "../assets/projects/knowme-lee.png";
 import "../style.css";
-
+import { FaPlayCircle, FaGithub } from "react-icons/fa";
 //package for card flip effect
 import ReactCardFlip from "react-card-flip";
 const Projects = () => {
@@ -42,38 +42,43 @@ const Projects = () => {
 
   const [flip, setFlip] = useState(false);
   const clickHappens = (id) => () => {
-    setFlip(prevState => ({
+    setFlip((prevState) => ({
       clicked: prevState.clicked === id ? null : id, // <-- toggle back to null or to new id
     }));
-  }
+  };
   return (
     <section
       id="projects"
       name="projects"
-      className=" text-white md:h-screen h-auto container mt-2"
+      className="w-full h-auto p-4 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
-            My Projects
+          <span>My </span> <span className="text-blue-400">Projects</span>
+            
           </p>
-          <p className="py-6 font-Roboto">
-            Check out some of my work right here. Hover on the each project to
-            read short description of it and view the hosted Live site and the
-            source code in GitHub.
+          <p className="pt-6 font-Roboto">
+            Check out some of my work right here. Click on "Live" button to
+            visit the hosted website of the project, click on "COde" button to
+            visit the GitHub repository of the project.
+          </p>
+          <p className="pt-2 font-Roboto">
+            You can double click on the project card to flip and see the short
+            description and benifites of the project. Double click again will flip it back.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 px-12 sm:px-0">
-          {projects.map((project,index) => (
+          {projects.map((project, index) => (
             <ReactCardFlip
               isFlipped={flip}
               flipDirection="horizontal"
               key={project.id}
             >
               <div
-                className=" max-w-sm overflow-hidden shadow-md  shadow-blue-400  rounded-lg h-96 hover:cursor-pointer"
-                onClick={clickHappens(index)}
+                className=" w-[20rem] overflow-hidden bg-slate-700 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
+                onDoubleClick={clickHappens(index)}
               >
                 <img
                   src={project.image}
@@ -91,31 +96,32 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
+                <div className="px-3">
+                  <button className="bg-orange-500 text-white text-center font-bold py-1 px-4 rounded-full float-left hover:scale-110 shadow-lg shadow-gray-800">
+                    <a href="https://lee-lovecalculator.netlify.app">
+                      Live
+                      <FaPlayCircle className="inline-block ml-1" />
+                    </a>
+                  </button>
+                  <button className="bg-black text-white text-center font-bold py-1 px-4 rounded-full float-right hover:scale-110 shadow-lg shadow-gray-800">
+                    <FaGithub className="inline-block mr-1" />
+                    Code
+                  </button>
+                </div>
               </div>
 
               <div
-                className=" max-w-sm overflow-hidden shadow-md  shadow-blue-400  rounded-lg h-96 hover:cursor-pointer"
-                onClick={() => setFlip(!flip)}
+                className=" w-[20rem] overflow-hidden bg-slate-800 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
+                onDoubleClick={() => setFlip(!flip)}
               >
-                <div className="py-4">
-                  <button className="bg-slate-900 text-white text-center font-bold py-2 px-4 rounded-full float-right">
-                    Code
-                  </button>
-                  <button className="bg-orange-500 text-white text-center font-bold py-2 px-4 rounded-full float-left">
-                    <a href="https://lee-lovecalculator.netlify.app">Live</a>
-                  </button>
-                </div>
-                <div className="mt-10">
-                  <div className="p-2">
-                    <p className="font-Open_Sans font-bold text-white">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div className="p-2">
-                    <p className="font-Open_Sans font-bold text-white">
-                      {project.benifites}
-                    </p>
-                  </div>
+                <div className="mt-4 p-4">
+                  <p className="font-Open_Sans font-bold text-white">
+                    {project.description}
+                  </p>
+
+                  <p className="pt-3 font-Open_Sans font-bold text-white">
+                    {project.benifites}
+                  </p>
                 </div>
               </div>
             </ReactCardFlip>

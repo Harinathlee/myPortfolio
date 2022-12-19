@@ -62,11 +62,15 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills"  name="skills" className="w-full h-screen bg-slate-900 p-4 text-white">
+    <section
+      id="skills"
+      name="skills"
+      className="w-full h-auto mt-4 p-4 text-white"
+    >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white font-Open_Sans">
         <div className="">
           <p className="text-4xl font-bold inline border-b-4 p-2 border-gray-500 text-orange-400 font-Roboto">
-            My Skills
+            <span>My </span> <span className="text-blue-400">Expertise</span>
           </p>
         </div>
 

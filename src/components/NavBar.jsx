@@ -20,7 +20,7 @@ const NavBar = () => {
     },
     {
       id: 4,
-      link_name: "Skills",
+      link_name: "expertise",
       link_url: "skills",
       active: false,
     },
@@ -32,7 +32,7 @@ const NavBar = () => {
     },
     {
       id: 6,
-      link_name: "Education",
+      link_name: "Academics",
       link_url: "education",
       active: false,
     },

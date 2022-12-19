@@ -42,12 +42,12 @@ const Testinomials = () => {
     <section
       id="testimonials"
       name="experience"
-      className="w-full h-screen bg-slate-900 p-4 text-white"
+      className="w-full h-auto p-4 text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
-            Testimonials
+            <span>My </span> <span className="text-blue-400">Testimonials</span>
           </p>
         </div>
         <div className="font-Open_Sans relative  pb-20 items-center place-content-center">
@@ -67,7 +67,7 @@ const Testinomials = () => {
           >
             {testimonials_data.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="flex items-center justify-center flex-col px-20 pb-10 pt-4 w-full h-auto max-h-[500px] rounded-3xl" >
+                <div className="flex items-center justify-center flex-col px-20 pb-10 pt-4 w-full h-auto max-h-[500px] rounded-3xl">
                   <img
                     src={testimonial.pic}
                     alt="sds"
@@ -79,7 +79,9 @@ const Testinomials = () => {
                   <div className="flex items-center justify-center flex-col mt-4">
                     <p>
                       <span>{testimonial.name}</span>
-                      <span className="p-2 text-blue-600 font-extrabold">|</span>
+                      <span className="p-2 text-blue-600 font-extrabold">
+                        |
+                      </span>
                       <span>{testimonial.designation}</span>
                     </p>
                     <p>
