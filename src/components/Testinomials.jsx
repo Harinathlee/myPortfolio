@@ -50,7 +50,7 @@ const Testinomials = () => {
             Testimonials
           </p>
         </div>
-        <div className=" text-slate-900 font-Open_Sans relative  pb-20 items-center place-content-center">
+        <div className="font-Open_Sans relative  pb-20 items-center place-content-center">
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -66,8 +66,8 @@ const Testinomials = () => {
             className="mySwiper"
           >
             {testimonials_data.map((testimonial) => (
-              <SwiperSlide>
-                <div className="flex items-center justify-center flex-col bg-slate-100 px-20 pb-10 pt-4 w-full h-[400px] rounded-3xl">
+              <SwiperSlide key={testimonial.id}>
+                <div className="flex items-center justify-center flex-col px-20 pb-10 pt-4 w-full h-auto max-h-[500px] rounded-3xl" >
                   <img
                     src={testimonial.pic}
                     alt="sds"
@@ -79,7 +79,7 @@ const Testinomials = () => {
                   <div className="flex items-center justify-center flex-col mt-4">
                     <p>
                       <span>{testimonial.name}</span>
-                      <span className="p-2 text-blue-600 font-bold">|</span>
+                      <span className="p-2 text-blue-600 font-extrabold">|</span>
                       <span>{testimonial.designation}</span>
                     </p>
                     <p>

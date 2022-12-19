@@ -3,15 +3,10 @@ import lovecalculator from "../assets/projects/lovecalculator.png";
 import upoint_query_builder from "../assets/projects/upoint-query-builder.png";
 import knowmelee from "../assets/projects/knowme-lee.png";
 import "../style.css";
-const Projects = () => {
-  const [hovered, setHovered] = useState(false);
-  function onMouseEnterHandler() {
-    setHovered(true);
-  }
 
-  function onMouseLeaveHandler() {
-    setHovered(false);
-  }
+//package for card flip effect
+import ReactCardFlip from "react-card-flip";
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -27,11 +22,11 @@ const Projects = () => {
       id: 2,
       name: "Upoint-SQL Querey Builder",
       description:
-        "This is website is an online form of a childhood game FLAMES we used to play to find out the relationship between 2 persons.",
+        "This is a Progressive Web App(PWA) which I developed to minimize my team's work by generating SQL queries automatically.",
       image: upoint_query_builder,
       technologies: ["ReactJS", "SCSS", "Java Script", "BootStarp"],
       benifites:
-        "This is just a fun game which I developed to practise my web developement skills.",
+        "This is a real time porject which is being used by clients. It helps our team to generate queries automatically in minutes rather than spending hours/days to write same queries manually and also reduces the probability of making mistakes.",
     },
     {
       id: 3,
@@ -45,6 +40,12 @@ const Projects = () => {
     },
   ];
 
+  const [flip, setFlip] = useState(false);
+  const clickHappens = (id) => () => {
+    setFlip(prevState => ({
+      clicked: prevState.clicked === id ? null : id, // <-- toggle back to null or to new id
+    }));
+  }
   return (
     <section
       id="projects"
@@ -64,67 +65,60 @@ const Projects = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 px-12 sm:px-0">
-          {projects.map((project) => (
-            <a
-              className="relative block w-full bg-gradient-to-tr group h-52"
-              href="#d"
+          {projects.map((project,index) => (
+            <ReactCardFlip
+              isFlipped={flip}
+              flipDirection="horizontal"
               key={project.id}
             >
               <div
-                className=" max-w-sm overflow-hidden shadow-sm bg-gradient-to-tr from-blue-500   to-indigo-600 shadow-indigo-400  rounded-lg h-96"
-                onMouseEnter={onMouseEnterHandler}
-                onMouseOut={onMouseLeaveHandler}
+                className=" max-w-sm overflow-hidden shadow-md  shadow-blue-400  rounded-lg h-96 hover:cursor-pointer"
+                onClick={clickHappens(index)}
               >
-                {hovered ? (
-                  <div className="p-4 transition-all transform translate-y-12 opacity-0 group-hover:opacity-100 group-hover:translate-y-2 duration-1000">
-                    <div className="py-4">
-                      <button className="bg-slate-900 text-white text-center font-bold py-2 px-4 rounded-full float-right">
-                        Code
-                      </button>
-                      <button className="bg-orange-500 text-white text-center font-bold py-2 px-4 rounded-full float-left">
-                        <a href="https://lee-lovecalculator.netlify.app">
-                          Live
-                        </a>
-                      </button>
-                    </div>
-                    <div className="mt-10">
-                      <div className="p-2">
-                        <p className="font-Open_Sans font-bold text-white">
-                          {project.description}
-                        </p>
-                      </div>
-                      <div className="p-2">
-                        <p className="font-Open_Sans font-bold text-white">
-                          {project.benifites}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <>
-                    <img
-                      src={project.image}
-                      alt="projimg"
-                      srcSet=""
-                      className="w-full"
-                    />
-                    <div className="px-6 py-2">
-                      <div className="font-bold text-xl mb-2">
-                        {project.name}
-                      </div>
-                    </div>
+                <img
+                  src={project.image}
+                  alt="projimg"
+                  className="w-full border-1"
+                />
+                <div className="px-6 py-2">
+                  <div className="font-bold text-xl mb-2">{project.name}</div>
+                </div>
 
-                    <div className="px-6 pt-2 pb-2">
-                      {project.technologies.map((tech) => (
-                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                )}
+                <div className="px-6 pt-2 pb-2">
+                  {project.technologies.map((tech) => (
+                    <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </a>
+
+              <div
+                className=" max-w-sm overflow-hidden shadow-md  shadow-blue-400  rounded-lg h-96 hover:cursor-pointer"
+                onClick={() => setFlip(!flip)}
+              >
+                <div className="py-4">
+                  <button className="bg-slate-900 text-white text-center font-bold py-2 px-4 rounded-full float-right">
+                    Code
+                  </button>
+                  <button className="bg-orange-500 text-white text-center font-bold py-2 px-4 rounded-full float-left">
+                    <a href="https://lee-lovecalculator.netlify.app">Live</a>
+                  </button>
+                </div>
+                <div className="mt-10">
+                  <div className="p-2">
+                    <p className="font-Open_Sans font-bold text-white">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="p-2">
+                    <p className="font-Open_Sans font-bold text-white">
+                      {project.benifites}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ReactCardFlip>
           ))}
         </div>
       </div>

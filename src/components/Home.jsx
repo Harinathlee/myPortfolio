@@ -50,8 +50,8 @@ const Home = () => {
             />
           </h3>
           <p className="text-gray-300 pt-4 max-w-md">
-            I am a developer who enjoys coding. For others it may look like I am
-            coding , but for me it feels like playing music in piano.
+            I am a developer who loves and enjoys coding. Others might think I'm coding,
+            but I'm actually performing music on the piano. <span>&#128521;</span>
           </p>
           <p className="text-gray-300 py-2  max-w-md">
             To know more about my expertise scroll down or click on any section

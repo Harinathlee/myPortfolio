@@ -44,6 +44,7 @@ function Education() {
             iconStyle={{ background: "#6D67E4", color: "#fff" }}
             icon={<TbSchool />}
             key={id}
+            
           >
             <h3 className="vertical-timeline-element-title text-xl font-bold text-[#6D67E4]">
               {course}
