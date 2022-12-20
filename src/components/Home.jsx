@@ -9,11 +9,7 @@ import "../style.css";
 import Typewriter from "typewriter-effect";
 const Home = () => {
   return (
-    <section
-      id="home"
-      name="home"
-      className="h-screen w-full"
-    >
+    <section id="home" name="home" className="h-screen w-full">
       <div
         name="quote"
         className="w-full justify-center text-center text-lg p-2 py-[5rem] h-32"
@@ -50,18 +46,19 @@ const Home = () => {
             />
           </h3>
           <p className="text-gray-300 pt-4 max-w-md">
-            I am a developer who loves and enjoys coding. Others might think I'm coding,
-            but I'm actually performing music on the piano. <span>&#128521;</span>
+            I am a developer who loves and enjoys coding. Others might think I'm
+            coding, but I'm actually performing music on the piano.{" "}
+            <span>&#128521;</span>
           </p>
           <p className="text-gray-300 py-2  max-w-md">
-            To know more about my expertise scroll down or click on any section
-            on top of the page.
+            To know more about my areas of expertise, scroll down or click on
+            any of the sections at the top of the page.
           </p>
           <div className="w-auto">
             <a
               href={Resume}
               download={true}
-              smooth={true}
+              smooth="true"
               duration={500}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg shadow-lg shadow-black"
             >
