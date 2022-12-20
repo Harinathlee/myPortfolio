@@ -3,6 +3,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Hobbies from "./components/Hobbies";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 
@@ -10,7 +11,6 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
 import Testinomials from "./components/Testinomials";
-
 
 export default function App() {
   return (
@@ -38,6 +38,7 @@ export default function App() {
       <Projects />
       <Education />
       <Testinomials />
+      <Hobbies />
       <Contact />
     </div>
   );
