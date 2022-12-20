@@ -85,7 +85,7 @@ const NavBar = () => {
                 activeClass="active"
                 to={data.link_url}
                 spy={true}
-                smooth={true}
+                smooth="true"
                 offset={-50}
                 duration={500}
                 className="cursor-pointer capitalize font-medium text-blue-400 hover:scale-105 duration-200 hover:underline hover:text-yellow-500 hover:font-bold active:bg-green-600 active:text-white active:font-bold"

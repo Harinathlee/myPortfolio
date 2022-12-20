@@ -6,9 +6,10 @@ import instagram from "../assets/instagram.png";
 import stackoverflow from "../assets/stack-overflow.png";
 import discord from "../assets/discord.png";
 import emailjs from "@emailjs/browser";
+
 const Contact = () => {
   const form = useRef();
-  const [mailStatus, setMailStatus] = useState("message not sent");
+  const [mailStatus, setMailStatus] = useState("Send");
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -21,18 +22,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           e.target.reset();
-          setMailStatus("message sent");
-          console.log(mailStatus);
+          setMailStatus("Message Sent");
         },
         (error) => {
-          console.log(error.text);
-          setMailStatus("message not sent");
-          console.log(mailStatus);
+          setMailStatus("Message not Sent");
         }
       );
   };
+
   const contacts = [
     {
       id: 1,
@@ -55,28 +53,28 @@ const Contact = () => {
       id: 1,
       logo: stackoverflow,
       name: "stackoverflow",
-      link:"https://stackoverflow.com/users/18469310/harinathlee"
+      link: "https://stackoverflow.com/users/18469310/harinathlee",
     },
 
     {
       id: 3,
       logo: discord,
       name: "discord",
-      link:"https://discord.com/users/harinathlee#6335"
+      link: "https://discord.com/users/harinathlee#6335",
     },
-    
+
     {
       id: 4,
       logo: instagram,
       name: "instagram",
-      link: "https://www.instagram.com/harinath_lee/"
+      link: "https://www.instagram.com/harinath_lee/",
     },
   ];
   return (
     <section
       id="contact"
       name="contact"
-      className="w-full h-auto p-4 text-white font-Open_Sans"
+      className="w-full h-auto mt-4 p-4 text-white font-Open_Sans"
     >
       <div className="max-w-screen-xl mt-10 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-2 mx-auto text-slate-50">
         <div className="pb-8">
@@ -85,10 +83,10 @@ const Contact = () => {
           </p>
           <div className="flex flex-col justify-between space-y-4">
             <p className="py-6">
-              To get in touch with me through email submit the contact form with
-              correct details and your concern message. If you want to contact
-              me through some other way the contact details and links are listed
-              below. Feel free to conatct in any form listed below.
+              To reach me by email, fill out the contact form with your contact
+              information and a message. If you need to reach me in another way,
+              my contact information and links are included below. Please
+              contact me using any of the methods given below.
             </p>
             {contacts.map((data) => (
               <div className="space-y-10" key={data.id}>
@@ -102,7 +100,7 @@ const Contact = () => {
             ))}
             <div className="mt-4 space-x-5 p-4">
               {sociallogos.map((data) => (
-                <a href={data.link}>
+                <a href={data.link} key={data.id}>
                   <img
                     key={data.id}
                     src={data.logo}
@@ -141,6 +139,9 @@ const Contact = () => {
             focus:ring-opacity-50
           "
                   placeholder="John cooks"
+                  onClick={() => {
+                    setMailStatus("Send");
+                  }}
                 />
               </label>
             </div>
@@ -169,6 +170,9 @@ const Contact = () => {
             focus:ring-opacity-50
           "
                   placeholder="john.cooks@example.com"
+                  onClick={() => {
+                    setMailStatus("Send");
+                  }}
                   required
                 />
               </label>
@@ -197,6 +201,9 @@ const Contact = () => {
             focus:ring-opacity-50
           "
                   placeholder="Hire you"
+                  onClick={() => {
+                    setMailStatus("Send");
+                  }}
                 />
               </label>
             </div>
@@ -225,6 +232,9 @@ const Contact = () => {
           "
                   rows="5"
                   placeholder="Type your message here........"
+                  onClick={() => {
+                    setMailStatus("Send");
+                  }}
                 ></textarea>
               </label>
             </div>
@@ -246,10 +256,9 @@ const Contact = () => {
                 hover:scale-105
                 hover:font-bold"
               >
-                Send
+                {mailStatus}
               </button>
             </div>
-            <div></div>
           </form>
         </div>
       </div>
