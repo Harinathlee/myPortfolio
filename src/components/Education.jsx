@@ -13,7 +13,7 @@ function Education() {
       id: 1,
       institute: "Birla Institute of Technology and Science ,Pilani,India.",
       course: "Master of Technology",
-      branch: "Software Engieering",
+      branch: "Software Engineering",
       year: "2019 - 2022",
       score: "7.2",
       logo: bits,
@@ -53,11 +53,11 @@ function Education() {
                 <h3 className="vertical-timeline-element-title text-xl font-bold text-[#6D67E4]">
                   {course}
                 </h3>
-              
-                  <p className="vertical-timeline-element-subtitle text-indigo-500 absolute right-4 top-2 font-semibold">
-                    CGPA: {score}
-                  </p>
-               
+
+                <p className="vertical-timeline-element-subtitle text-indigo-500 absolute right-4 top-2 font-semibold">
+                  CGPA: {score}
+                </p>
+
                 <h4 className="vertical-timeline-element-subtitle text-gray-600">
                   {branch}
                 </h4>
@@ -69,7 +69,6 @@ function Education() {
                     {institute}
                   </p>
                 </div>
-                
               </VerticalTimelineElement>
             )
           )}
