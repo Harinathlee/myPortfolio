@@ -10,30 +10,20 @@ import Typewriter from "typewriter-effect";
 const Home = () => {
   return (
     <section id="home" name="home" className="h-screen w-full">
-      <div
-        name="quote"
-        className="w-full justify-center text-center text-lg p-2 py-[5rem] h-32"
-      >
-        <p className="text-gray-200 italic font-bold">
-          "I am not the best today, But I am better than yesterday."
-        </p>
-        <span className="font-signature text-2xl text-green-500 text-right font-semibold">
-          -harinathlee
-        </span>
-      </div>
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-auto md:flex-row m-0">
+      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-auto md:flex-row pt-14">
         <div className="flex flex-col justify-center h-full font-Abril_Fatface">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
-            Namasthey
-            <img
-              src={Namasthey}
-              alt="namasthey"
-              className="inline h-12 w-12 hover:w-15 hover:h-15"
-            />
-            <div>
+          <img
+            src={Namasthey}
+            alt="namasthey"
+            className="inline h-14 w-14 hover:w-15 hover:h-15"
+          />
+          <h4 className="text-xl font-bold text-white inline-block font-Style_Script">Namasthey!</h4>
+
+          <div>
+            <h2 className="text-4xl font-bold text-white">
               This is <span className="underline">Harinath</span>
-            </div>
-          </h2>
+            </h2>
+          </div>
 
           <h3 className="text-gray-300 font-Cassandra font-semibold text-lg">
             <Typewriter
@@ -45,19 +35,19 @@ const Home = () => {
               }}
             />
           </h3>
-          <p className="text-gray-300 pt-4 max-w-md">
+          <p className="text-gray-200 pt-4 max-w-md">
             I am a developer who loves and enjoys coding. Others might think I'm
             coding, but I'm actually performing music on the piano.{" "}
             <span>&#128521;</span>
           </p>
-          <p className="text-gray-300 py-2  max-w-md">
+          <p className="text-gray-200 py-2  max-w-md">
             To know more about my areas of expertise, scroll down or click on
             any of the sections at the top of the page.
           </p>
           <div className="w-auto">
             <a
               href={Resume}
-              download={true}
+              download="Harinath_Resume"
               smooth="true"
               duration={500}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg shadow-lg shadow-black"
@@ -81,6 +71,38 @@ const Home = () => {
             className="rounded-2xl mx-auto w-[400px] ml-10"
           />
         </div>
+      </div>
+      <div
+        name="quote"
+        className="w-full justify-center text-center text-lg h-auto "
+      >
+        <figure class="mx-auto max-w-screen-md text-center">
+          <svg
+            aria-hidden="true"
+            class="mx-auto mb-3 w-10 h-10 text-gray-400 dark:text-gray-600"
+            viewBox="0 0 24 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+              fill="currentColor"
+            />
+          </svg>
+          <blockquote>
+            <p class="text-lg italic font-medium text-white">
+              "I am not the best today, But I am better than yesterday."
+            </p>
+          </blockquote>
+          <figcaption class="flex justify-center items-center mt-2 space-x-3 ">
+            <div class="flex items-center divide-x-2 divide-gray-500 ">
+              <cite class="pr-3 font-medium text-orange-400 font-Style_Script ">
+                harinathlee
+              </cite>
+              <cite class="pl-3 text-sm text-sky-300">Myself</cite>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

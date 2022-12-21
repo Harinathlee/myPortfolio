@@ -1,4 +1,5 @@
 //import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
@@ -14,32 +15,27 @@ import Testinomials from "./components/Testinomials";
 
 export default function App() {
   return (
-    <div className="bg-slate-900">
-      {/*} <BrowserRouter>
-        <NavBar />  
-        <SocialLinks />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route index element={<Portfolio />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/experience" element={<Experience />} />
-          <Route exact path="/skills" element={<Skills />} />
-          <Route exact path="/projects" element={<Projects />} />
-          <Route exact path="/education" element={<Education />} />
-          <Route exact path="/contact" element={<Contact />} />
-        </Routes>
-  </BrowserRouter>{*/}
-      <NavBar />
-      <SocialLinks />
-      <Home />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Education />
-      <Testinomials />
-      <Hobbies />
-      <Contact />
-    </div>
+    <>
+      {window.screen.width > 1024 ? (
+        <div className="bg-slate-900">
+          <NavBar />
+          <SocialLinks />
+          <Home />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Education />
+          <Testinomials />
+          <Hobbies />
+          <Contact />
+        </div>
+      ) : (
+        <div className="justify-center text-center absolute top-[40%] m-10 text-red-600">
+          This website is not suppported in mobile screen, for better experince
+          visit in desktop mode.
+        </div>
+      )}
+    </>
   );
 }

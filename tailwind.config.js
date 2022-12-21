@@ -16,6 +16,8 @@ module.exports = {
       League_Spartan: ["League Spartan"],
       Abril_Fatface: ["Abril Fatface"],
       Cassandra: ["Cassandra"],
+      Spirax:["Spirax"],
+      Style_Script:['Style Script']
     },
   },
   plugins: [require("tw-elements/dist/plugin")],

@@ -66,7 +66,7 @@ const Projects = () => {
           </p>
           <p className="pt-2 font-Roboto">
             Click on "Live" button to visit the hosted website of the project,
-            click on "COde" button to visit the GitHub repository of the
+            click on "Code" button to visit the GitHub repository of the
             project.
           </p>
           <p className="pt-2 font-Roboto">
@@ -77,7 +77,7 @@ const Projects = () => {
         </div>
         <Swiper
           slidesPerView={2}
-          spaceBetween={5}
+          spaceBetween={0}
           slidesPerGroup={3}
           loop={true}
           loopFillGroupWithBlank={true}

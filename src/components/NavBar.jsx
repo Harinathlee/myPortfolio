@@ -42,8 +42,15 @@ const NavBar = () => {
       link_url: "testimonials",
       active: false,
     },
+    
     {
       id: 8,
+      link_name: "Hobbies",
+      link_url: "hobbies",
+      active: false,
+    },
+    {
+      id: 9,
       link_name: "Contact",
       link_url: "contact",
       active: false,
@@ -80,7 +87,8 @@ const NavBar = () => {
       <ul className="hidden md:flex">
         {links.map((data) => {
           return (
-            <li key={data.id} className="px-4">
+            <li key={data.id}>
+              <p className="px-2 inline-flex">|</p>
               <Link
                 activeClass="active"
                 to={data.link_url}
@@ -88,14 +96,16 @@ const NavBar = () => {
                 smooth="true"
                 offset={-50}
                 duration={500}
-                className="cursor-pointer capitalize font-medium text-blue-400 hover:scale-105 duration-200 hover:underline hover:text-yellow-500 hover:font-bold active:bg-green-600 active:text-white active:font-bold"
+                className="cursor-pointer capitalize text-orange-400  duration-200 hover:underline hover:text-blue-400 font-bold active:bg-green-600 active:text-white active:font-bold"
               >
-                {data.link_name}
+                {data.link_name} 
               </Link>
             </li>
           );
         })}
       </ul>
+
+      
     </div>
   );
 };
