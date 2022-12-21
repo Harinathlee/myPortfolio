@@ -17,11 +17,11 @@ const Home = () => {
             alt="namasthey"
             className="inline h-14 w-14 hover:w-15 hover:h-15"
           />
-          <h4 className="text-xl font-bold text-white inline-block font-Style_Script">Namasthey!</h4>
+          <h4 className="text-xl font-bold text-white inline-block">Namasthey!</h4>
 
           <div>
             <h2 className="text-4xl font-bold text-white">
-              This is <span className="underline">Harinath</span>
+              This is <span className="underline font-signature">Harinath</span>
             </h2>
           </div>
 
@@ -95,8 +95,8 @@ const Home = () => {
             </p>
           </blockquote>
           <figcaption class="flex justify-center items-center mt-2 space-x-3 ">
-            <div class="flex items-center divide-x-2 divide-gray-500 ">
-              <cite class="pr-3 font-medium text-orange-400 font-Style_Script ">
+            <div class="flex items-center divide-x-2 divide-gray-500 font-Roboto">
+              <cite class="pr-3 font-medium text-orange-400">
                 harinathlee
               </cite>
               <cite class="pl-3 text-sm text-sky-300">Myself</cite>
