@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FaPlayCircle, FaGithub } from "react-icons/fa";
 //package for card flip effect
 import ReactCardFlip from "react-card-flip";
+
+
 const ProjectCard = (props) => {
   const [flip, setFlip] = useState(false);
   const clickHappens = (id) => () => {
@@ -13,7 +15,7 @@ const ProjectCard = (props) => {
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
       <div
-        className="ml-20 mr-10 w-[20rem] overflow-hidden bg-slate-700 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
+        className="ml-20 mr-20 w-[20rem] overflow-hidden bg-slate-700 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
         onDoubleClick={clickHappens(project.id)}
       >
         <img src={project.image} alt="projimg" className="w-full border-1" />
@@ -46,7 +48,7 @@ const ProjectCard = (props) => {
       </div>
 
       <div
-        className=" w-[20rem] overflow-hidden bg-slate-800 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
+        className="ml-20 mr-20 w-[20rem] overflow-hidden bg-slate-800 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
         onDoubleClick={() => setFlip(!flip)}
       >
         <div className="mt-4 p-4">

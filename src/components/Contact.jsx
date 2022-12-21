@@ -6,6 +6,11 @@ import instagram from "../assets/instagram.png";
 import stackoverflow from "../assets/stack-overflow.png";
 import discord from "../assets/discord.png";
 import emailjs from "@emailjs/browser";
+// Importing toastify module
+import { toast, ToastContainer } from "react-toastify";
+
+// Import toastify css file
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
@@ -24,9 +29,35 @@ const Contact = () => {
         (result) => {
           e.target.reset();
           setMailStatus("Message Sent");
+          toast.success(
+            "I did recieved you message. Will check it and reply ASAP!",
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            }
+          );
         },
         (error) => {
           setMailStatus("Message not Sent");
+          toast.error(
+            "Your message is not sent. Please recheck the details and message again!",
+            {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            }
+          );
         }
       );
   };
@@ -142,6 +173,7 @@ const Contact = () => {
                   onClick={() => {
                     setMailStatus("Send");
                   }}
+                  required={true}
                 />
               </label>
             </div>
@@ -173,7 +205,7 @@ const Contact = () => {
                   onClick={() => {
                     setMailStatus("Send");
                   }}
-                  required
+                  required={true}
                 />
               </label>
             </div>
@@ -204,6 +236,7 @@ const Contact = () => {
                   onClick={() => {
                     setMailStatus("Send");
                   }}
+                  required={true}
                 />
               </label>
             </div>
@@ -235,6 +268,7 @@ const Contact = () => {
                   onClick={() => {
                     setMailStatus("Send");
                   }}
+                  required={true}
                 ></textarea>
               </label>
             </div>
@@ -261,6 +295,18 @@ const Contact = () => {
             </div>
           </form>
         </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
       </div>
     </section>
   );

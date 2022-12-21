@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -25,8 +25,9 @@ const Experience = () => {
         "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",
       ],
     },
+    
   ];
-
+  const [showMore, setShowMore] = useState(false);
   return (
     <section
       id="experience"
@@ -37,6 +38,10 @@ const Experience = () => {
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
             <span>My </span> <span className="text-blue-400">Experience</span>
+          </p>
+          <p className="pt-6 text-lg font-Open_Sans">
+            My experiences are listed in chronological order below. Click on an
+            element to learn more about its responsibilities.
           </p>
         </div>
         {/* verti*/}
@@ -50,49 +55,67 @@ const Experience = () => {
               year,
               logo,
               responsibilities,
-              achivements
+              achivements,
             }) => (
               <VerticalTimelineElement
                 className="vertical-timeline-element--education"
                 date={year}
                 iconStyle={{ background: "#6D67E4", color: "#fff" }}
                 icon={<MdWorkOutline />}
-                key = {id}
+                key={id}
               >
-                <h3 className="vertical-timeline-element-title text-xl font-bold text-[#6D67E4]">
-                  {job_title}
-                </h3>
+                <div
+                  onClick={() => {
+                    setShowMore(!showMore);
+                  }}
+                  className="hover:cursor-pointer"
+                >
+                  <h3 className="vertical-timeline-element-title text-xl font-bold text-[#6D67E4]">
+                    {job_title}
+                  </h3>
 
-                <h4 className="vertical-timeline-element-subtitle text-gray-600">
-                  {job_description}
-                </h4>
-                <div className="float-left pr-4 pt-2">
-                  <img src={logo} alt="bits" className="w-10 mx-auto" />
-                </div>
-                <div>
-                  <p className="vertical-timeline-element-subtitle text-slate-900">
-                    {company}
-                  </p>
-                </div>
-                <div className="mt-2 pl-4">
-                  <h4 className="vertical-timeline-element-subtitle text-[#6D67E4] font-semibold underline">
-                    Role & Responsibilities:
+                  <h4 className="vertical-timeline-element-subtitle text-gray-600">
+                    {job_description}
                   </h4>
-                  <ul>
-                    {responsibilities.map((data,index) => (
-                      <li key={index} className="list-disc text-black">{data}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mt-2 pl-4">
-                  <h4 className="vertical-timeline-element-subtitle text-[#6D67E4] font-semibold underline">
-                    Achivements:
-                  </h4>
-                  <ul>
-                    {achivements.map((data,index) => (
-                      <li key={index} className="list-disc text-black">{data}</li>
-                    ))}
-                  </ul>
+                  <div className="float-left pr-4 pt-2">
+                    <img src={logo} alt="bits" className="w-10 mx-auto" />
+                  </div>
+                  <div>
+                    <p className="vertical-timeline-element-subtitle text-slate-900">
+                      {company}
+                    </p>
+                  </div>
+
+                  {showMore ? (
+                    <div>
+                      <div className="mt-2 pl-4">
+                        <h4 className="vertical-timeline-element-subtitle text-[#6D67E4] font-semibold underline">
+                          Role & Responsibilities:
+                        </h4>
+                        <ul>
+                          {responsibilities.map((data, index) => (
+                            <li key={index} className="list-disc text-black">
+                              {data}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="mt-2 pl-4">
+                        <h4 className="vertical-timeline-element-subtitle text-[#6D67E4] font-semibold underline">
+                          Achivements:
+                        </h4>
+                        <ul>
+                          {achivements.map((data, index) => (
+                            <li key={index} className="list-disc text-black">
+                              {data}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ) : (
+                    <div></div>
+                  )}
                 </div>
               </VerticalTimelineElement>
             )
