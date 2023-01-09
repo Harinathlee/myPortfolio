@@ -7,7 +7,6 @@ import Experience from "./components/Experience";
 import Hobbies from "./components/Hobbies";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
