@@ -1,9 +1,7 @@
 import React from "react";
-
 import Namasthey from "../assets/namaste.png";
 import webdev from "../assets/web-dev.gif";
-//import { BsFillFileArrowDownFill } from "react-icons/bs";
-import Resume from "../assets/docs/Harinath's Resume.pdf";
+import Resume from "../assets/docs/Harinath-Resume.pdf";
 import download from "../assets/download.gif";
 import "../style.css";
 import Typewriter from "typewriter-effect";
@@ -37,7 +35,7 @@ const Home = () => {
           </h3>
           <p className="text-gray-200 pt-4 max-w-md">
             I am a developer who loves and enjoys coding. Others might think I'm
-            coding, but I'm actually performing music on the piano.{" "}
+            coding, but I'm actually performing music on the piano.
             <span>&#128521;</span>
           </p>
           <p className="text-gray-200 py-2  max-w-md">
@@ -74,12 +72,12 @@ const Home = () => {
       </div>
       <div
         name="quote"
-        className="w-full justify-center text-center text-lg h-auto "
+        className="w-full justify-center text-center text-lg h-auto"
       >
-        <figure class="mx-auto max-w-screen-md text-center">
+        <figure className="mx-auto max-w-screen-md text-center">
           <svg
             aria-hidden="true"
-            class="mx-auto mb-3 w-10 h-10 text-gray-400 dark:text-gray-600"
+            className="mx-auto mb-3 w-10 h-10 text-gray-400 dark:text-gray-600"
             viewBox="0 0 24 27"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,16 +88,16 @@ const Home = () => {
             />
           </svg>
           <blockquote>
-            <p class="text-lg italic font-medium text-white">
+            <p className="text-lg italic font-medium text-white">
               "I am not the best today, But I am better than yesterday."
             </p>
           </blockquote>
-          <figcaption class="flex justify-center items-center mt-2 space-x-3 ">
-            <div class="flex items-center divide-x-2 divide-gray-500 font-Roboto">
-              <cite class="pr-3 font-medium text-orange-400">
+          <figcaption className="flex justify-center items-center mt-2 space-x-3 ">
+            <div className="flex items-center divide-x-2 divide-gray-500 font-Roboto">
+              <cite className="pr-3 font-medium text-orange-400">
                 harinathlee
               </cite>
-              <cite class="pl-3 text-sm text-sky-300">Myself</cite>
+              <cite className="pl-3 text-sm text-sky-300">Myself</cite>
             </div>
           </figcaption>
         </figure>
