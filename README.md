@@ -1,3 +1,10 @@
-# react-qtt47g
+# KnowMe -myPortfolio
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-qtt47g)
+This is my own portfolio website, where I can demonstrate my personality, experience, and skill to recruiters or clients interested in hiring me.
+
+## Benifits
+It also allows folks to see my web building talents and know more about me.
+
+## Technologies Used 
+
+["HTML", "React JS", "Tailwind CSS"]
