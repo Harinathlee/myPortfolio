@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
   return (
     <ReactCardFlip isFlipped={flip} flipDirection="horizontal">
       <div
-        className="ml-20 mr-20 w-[20rem] overflow-hidden bg-slate-700 shadow-slate-800  rounded-lg h-96 hover:cursor-pointer"
+        className="ml-20 mr-20 w-[20rem] overflow-hidden bg-slate-700 shadow-md  rounded-lg h-96 hover:cursor-pointer"
         onDoubleClick={clickHappens(project.id)}
       >
         <img src={project.image} alt="projimg" className="w-full border-1" />
@@ -35,14 +35,16 @@ const ProjectCard = (props) => {
         </div>
         <div className="px-3">
           <button className="bg-orange-500 text-white text-center font-bold py-1 px-4 rounded-full float-left hover:scale-110 shadow-lg shadow-gray-800">
-            <a href="https://lee-lovecalculator.netlify.app">
+            <a href={project.link}>
               Live
               <FaPlayCircle className="inline-block ml-1" />
             </a>
           </button>
           <button className="bg-black text-white text-center font-bold py-1 px-4 rounded-full float-right hover:scale-110 shadow-lg shadow-gray-800">
+          <a href={project.code}>
             <FaGithub className="inline-block mr-1" />
             Code
+            </a>
           </button>
         </div>
       </div>
