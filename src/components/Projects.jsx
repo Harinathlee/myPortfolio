@@ -2,6 +2,7 @@ import React from "react";
 import lovecalculator from "../assets/projects/lovecalculator.png";
 import upoint_query_builder from "../assets/projects/upoint-query-builder.png";
 import knowmelee from "../assets/projects/knowme-lee.png";
+import creativecreatures from "../assets/projects/CreativeCreatures.png";
 import "../style.css";
 
 // Import Swiper React components
@@ -25,6 +26,8 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "Java Script", "BootStarp"],
       benifites:
         "This is just a game I made to practice my web development abilities.",
+      link: "https://lee-lovecalculator.netlify.app/",
+      code: "https://github.com/Harinathlee/lee-Love-Calculator"
     },
     {
       id: 2,
@@ -35,6 +38,8 @@ const Projects = () => {
       technologies: ["ReactJS", "SCSS", "Java Script", "BootStarp"],
       benifites:
         "This is a real-time project that clients are using. It allows our team to construct queries automatically in minutes rather than spending hours or days writing the same queries manually, and it also decreases the possibility of errors.",
+        link: "https://upoint-query-builder.netlify.app/",
+        code :"https://github.com/Harinathlee/upoint-query-builder"
     },
     {
       id: 3,
@@ -44,6 +49,20 @@ const Projects = () => {
       image: knowmelee,
       technologies: ["HTML", "React JS", "Tailwind CSS"],
       benifites: "It also allows folks to see my web building talents.",
+      link: "/",
+      code: "https://github.com/Harinathlee/myPortfolio"
+    },
+    {
+      id: 4,
+      name: "Creative Creatures",
+      description:
+        "This is my business website called CreativeCreatures where I provide services like digital wedding invitation videos and E-cards.",
+      image: creativecreatures,
+      technologies: ["HTML", "React JS", "Tailwind CSS","Ripple UI"],
+      benifites:
+        "It also allows folks to know about my business and let people see my sample works and let them to contact me through the social media accouts listed in site.",
+        link: "https://creative-creatures.netlify.app/",
+        code: "https://github.com/Harinathlee/CreativeCreatures"
     },
   ];
 
@@ -78,7 +97,7 @@ const Projects = () => {
         <Swiper
           slidesPerView={2}
           spaceBetween={0}
-          slidesPerGroup={3}
+          slidesPerGroup={4}
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -86,11 +105,11 @@ const Projects = () => {
           }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper w-full"
+          className="mySwiper w-full h-auto"
         >
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 px-12 sm:px-0">
-            {projects.map((project, index) => (
-              <SwiperSlide key={index}>
+            {projects.map((project) => (
+              <SwiperSlide key={project.id}>
                 <ProjectCard project={project} />
               </SwiperSlide>
             ))}
