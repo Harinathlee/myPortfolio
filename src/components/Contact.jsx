@@ -115,9 +115,9 @@ const Contact = () => {
           <div className="flex flex-col justify-between space-y-4">
             <p className="py-6">
               To reach me by email, fill out the contact form with your contact
-              information and a message. If you need to reach me in another way,
-              my contact information and links are included below. Please
-              contact me using any of the methods given below.
+              information and a message. And you can also reach out to me via
+              whatsapp or instagram by just clicking on the logo which leads to
+              my profile.
             </p>
             {contacts.map((data) => (
               <div className="space-y-10" key={data.id}>
@@ -149,8 +149,7 @@ const Contact = () => {
             <div className="mb-2">
               <label>
                 <span
-                  className="text-slate-900 font-bold
-                "
+                  className="text-slate-900 font-bold"
                 >
                   Your name:
                 </span>
