@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/heroImage2.png";
+import HeroImage from "../assets/heroImage3.png";
 const About = () => {
   return (
     <section id="about" name="about" className="w-full h-auto p-4 text-white">
@@ -12,7 +12,7 @@ const About = () => {
         <div className="grid grid-cols-5 gap-8">
           <div className="about-text col-span-3 font-Open_Sans">
             <p className="text-lg mt-3">
-              <span className="text-2xl font-bold">I</span>am a dedicated web
+              <span className="text-2xl font-bold">I </span>am a passionate web
               developer with experience in front-end web development
               technologies such as HTML, CSS, JS, and React. I created a few
               projects utilizing these technologies, which are listed on the

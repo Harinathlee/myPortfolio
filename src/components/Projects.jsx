@@ -17,20 +17,9 @@ import { Pagination, Navigation } from "swiper";
 import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const projects = [
+    
     {
       id: 1,
-      name: "Lee-Love Calculator",
-      description:
-        "This website is an online version of the childhood game FLAMES, which we used to play to determine the relationship between two people.",
-      image: lovecalculator,
-      technologies: ["HTML", "CSS", "Java Script", "BootStarp"],
-      benifites:
-        "This is just a game I made to practice my web development abilities.",
-      link: "https://lee-lovecalculator.netlify.app/",
-      code: "https://github.com/Harinathlee/lee-Love-Calculator"
-    },
-    {
-      id: 2,
       name: "Upoint-SQL Querey Builder",
       description:
         "This is a Progressive Web App (PWA) that I created to help my team save time by automatically creating SQL queries.",
@@ -42,7 +31,7 @@ const Projects = () => {
         code :"https://github.com/Harinathlee/upoint-query-builder"
     },
     {
-      id: 3,
+      id: 2,
       name: "KnowMe - myPortfolio",
       description:
         "This is my own portfolio website, where I can demonstrate my personality, experience, and skill to recruiters or clients interested in hiring me.",
@@ -53,7 +42,7 @@ const Projects = () => {
       code: "https://github.com/Harinathlee/myPortfolio"
     },
     {
-      id: 4,
+      id: 3,
       name: "Creative Creatures",
       description:
         "This is my business website called CreativeCreatures where I provide services like digital wedding invitation videos and E-cards.",
@@ -63,6 +52,18 @@ const Projects = () => {
         "It also allows folks to know about my business and let people see my sample works and let them to contact me through the social media accouts listed in site.",
         link: "https://creative-creatures.netlify.app/",
         code: "https://github.com/Harinathlee/CreativeCreatures"
+    },
+    {
+      id: 4,
+      name: "Lee-Love Calculator",
+      description:
+        "This website is an online version of the childhood game FLAMES, which we used to play to determine the relationship between two people.",
+      image: lovecalculator,
+      technologies: ["HTML", "CSS", "Java Script", "BootStarp"],
+      benifites:
+        "This is just a game I made to practice my web development abilities.",
+      link: "https://lee-lovecalculator.netlify.app/",
+      code: "https://github.com/Harinathlee/lee-Love-Calculator"
     },
   ];
 
