@@ -16,10 +16,12 @@ const Experience = () => {
       year: "May 2018 - Present",
       logo: wipro,
       responsibilities: [
-        "I am presently working as a senior project engineer in wipro for the client Alight solutions as a Developer support.",
+        "I am currently working as a senior project engineer in wipro for the client Alight solutions as a Developer support.",
         "I analyze and update data in a database that is utilised for development purposes.",
         "Mostly we use own client tools(Upoint) for updating data.When we get huge data it takes too long to update in tooling so we use SQL queries to update it.",
         "On extra I used to help other teams in migrating code files from SVN to Bitbucket (cloud service).",
+        "I developed a React Progressive Web App(PWA) using HTML, CSS, JS & ReactJS for my team, which creates SQL queries automatically in minutes rather than hours or days when done manually.",
+       "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free."
       ],
       achivements: [
         "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",

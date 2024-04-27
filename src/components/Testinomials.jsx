@@ -18,12 +18,12 @@ const Testinomials = () => {
     {
       id: 1,
       name: "Brenda Novak",
-      designation: "IT Portfolio Manager",
+      designation: "IT Development Manager",
       company: alight,
       company_name: "ALight Solution",
       message:
-        "  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius magni ab nihil eaque voluptates iste ullam suscipit deserunt officia ad ducimus molestiae dolorem unde sapiente, minima adipisci magnam dolore perferendis",
-      linkedIn: "https://www.linkedin.com/in/brenda-novak-0b12986/",
+        "I have enjoyed working with Hari at Alight. He has been flexible with his time to work U.S. daytime hours when we were needing someone to be available. He has very good communication skills. He helped brainstorm and provide alternate suggestions when we were working through some unusual data situations. He is continuing to expand his knowledge and skills regularly.",
+        linkedIn: "https://www.linkedin.com/in/harinath-g/details/recommendations/",
       pic: brenda,
     },
     {
@@ -68,12 +68,13 @@ const Testinomials = () => {
             {testimonials_data.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <div className="flex items-center justify-center flex-col px-20 pb-10 pt-4 w-full h-auto max-h-[500px] rounded-3xl">
+                <a href={testimonial.linkedIn}>
                   <img
                     src={testimonial.pic}
                     alt="sds"
                     className="w-32 h-32 object-cover rounded-full"
                   />
-
+                </a>
                   <p className="mt-2">{testimonial.message}</p>
                   <FaQuoteLeft className="mt-8" />
                   <div className="flex items-center justify-center flex-col mt-4">
@@ -85,13 +86,13 @@ const Testinomials = () => {
                       <span>{testimonial.designation}</span>
                     </p>
                     <p>
-                      <a href={testimonial.linkedIn}>
+                      
                         <img
                           src={testimonial.company}
                           alt={testimonial.company_name}
                           className="h-8 mt-1"
                         />
-                      </a>
+                    
                     </p>
                   </div>
                 </div>
