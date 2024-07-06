@@ -18,16 +18,17 @@ const Experience = () => {
       responsibilities: [
         "I am currently working as a senior project engineer in wipro for the client Alight solutions as a Developer support.",
         "I analyze and update data in a database that is utilised for development purposes.",
-        "Mostly we use own client tools(Upoint) for updating data.When we get huge data it takes too long to update in tooling so we use SQL queries to update it.",
-        "On extra I used to help other teams in migrating code files from SVN to Bitbucket (cloud service).",
-        "I developed a React Progressive Web App(PWA) using HTML, CSS, JS & ReactJS for my team, which creates SQL queries automatically in minutes rather than hours or days when done manually.",
-       "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free."
+        "I used to assist other teams in moving code files from SVN to Bitbucket (cloud service).",
+        "Along with this, I worked with a front-end development team to update the UI components.",
+        "With the skills I gained from this team and their guidance, I created a React Progressive Web App (PWA) for my team utilizing HTML, CSS, JS, and ReactJS that generates SQL queries automatically in minutes rather than hours or days when done manually.",
+        "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free.",
+        "Used to manage JIRA tasks and generated a few dashboards to manage the tasks that our team receives.",
+        "I have managed a few projects, provided estimated completion times, and successfully completed them with my team.",
       ],
       achivements: [
         "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",
       ],
     },
-    
   ];
   const [showMore, setShowMore] = useState(false);
   return (
