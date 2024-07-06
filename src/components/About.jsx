@@ -20,11 +20,11 @@ const About = () => {
             </p>
             <br />
             <p className="text-lg">
-              I am presently working as a senior project engineer in Wipro for
+              I am currently working as a senior project engineer in Wipro for
               the client Alight solutions as a Developer support. I analyze and
               update data in a database that is utilized for development
               purposes, and I migrate code files from SVN to Bitbucket (cloud
-              service).
+              service). Also have worked with Front-end development team in updating the UI components.
             </p>
             <br />
             <p className="text-lg ">
