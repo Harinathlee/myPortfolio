@@ -5,29 +5,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { TbSchool } from "react-icons/tb";
-import bits from "../assets/bits.png";
-import svu from "../assets/svu.png";
+
+//importing education details
+import { educationData } from "./profile_data";
 function Education() {
-  const educationData = [
-    {
-      id: 1,
-      institute: "Birla Institute of Technology and Science ,Pilani,India.",
-      course: "Master of Technology",
-      branch: "Software Engineering",
-      year: "2019 - 2022",
-      score: "7.2",
-      logo: bits,
-    },
-    {
-      id: 2,
-      institute: "Sri Venkateshwara University, Tirupati,India.",
-      course: "Bachelore of Science",
-      branch: "Computer Science",
-      year: "2015 - 2018",
-      score: "8.6",
-      logo: svu,
-    },
-  ];
+
   return (
     <section
       id="education"

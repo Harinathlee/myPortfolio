@@ -1,45 +1,11 @@
 import React from "react";
-import writing from "../assets/writing.png";
-import learning from "../assets/learning.png";
-import cooking from "../assets/cooking.png";
-import cycling from "../assets/cycling.png";
-import videoediting from "../assets/videoediting.png";
-import travelling from "../assets/travelling.png";
-
+//this marquee feture makes our element continuesly move from a direction to another direction
 import Marquee from "react-fast-marquee";
+
+//import hobbies
+import { hobbies } from "./profile_data";
 const Hobbies = () => {
-  const hobbies = [
-    {
-      id: 1,
-      src: writing,
-      title: "writing",
-    },
-    {
-      id: 2,
-      src: cooking,
-      title: "cooking",
-    },
-    {
-      id: 3,
-      src: videoediting,
-      title: "video editing",
-    },
-    {
-      id: 4,
-      src: cycling,
-      title: "cycling",
-    },
-    {
-      id: 5,
-      src: learning,
-      title: "learning languages",
-    },
-    {
-      id: 6,
-      src: travelling,
-      title: "travelling",
-    },
-  ];
+
   return (
     <section
       id="hobbies"

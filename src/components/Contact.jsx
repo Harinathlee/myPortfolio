@@ -1,10 +1,5 @@
 import React, { useRef, useState } from "react";
-import whatsapp from "../assets/whatsapp.png";
-import email from "../assets/email.png";
-import location from "../assets/location.png";
-import instagram from "../assets/instagram.png";
-import stackoverflow from "../assets/stack-overflow.png";
-import discord from "../assets/discord.png";
+
 import emailjs from "@emailjs/browser";
 // Importing toastify module
 import { toast, ToastContainer } from "react-toastify";
@@ -12,6 +7,8 @@ import { toast, ToastContainer } from "react-toastify";
 // Import toastify css file
 import "react-toastify/dist/ReactToastify.css";
 
+//importing contact and logos from data 
+import {contacts , sociallogos} from "./profile_data";
 const Contact = () => {
   const form = useRef();
   const [mailStatus, setMailStatus] = useState("Send");
@@ -62,45 +59,7 @@ const Contact = () => {
       );
   };
 
-  const contacts = [
-    {
-      id: 1,
-      value: "+91-9963371677",
-      logo: whatsapp,
-    },
-    {
-      id: 2,
-      value: "harinathlee2598@outlook.com",
-      logo: email,
-    },
-    {
-      id: 3,
-      value: "Chittoor, Andhra Pradesh, India.",
-      logo: location,
-    },
-  ];
-  const sociallogos = [
-    {
-      id: 1,
-      logo: stackoverflow,
-      name: "stackoverflow",
-      link: "https://stackoverflow.com/users/18469310/harinathlee",
-    },
-
-    {
-      id: 3,
-      logo: discord,
-      name: "discord",
-      link: "https://discord.com/users/harinathlee#6335",
-    },
-
-    {
-      id: 4,
-      logo: instagram,
-      name: "instagram",
-      link: "https://www.instagram.com/harinath_lee/",
-    },
-  ];
+  
   return (
     <section
       id="contact"

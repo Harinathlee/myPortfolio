@@ -1,65 +1,9 @@
 import React from "react";
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import java from "../assets/java.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
-import bootstrap from "../assets/bootstrap.png";
 
+//importing data of skills
+import { techs } from "./profile_data";
 const Skills = () => {
-  const techs = [
-    {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-[#e34c26]",
-    },
-    {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-[#264de4]",
-    },
-    {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-[#61DBFB]",
-    },
-    {
-      id: 5,
-      src: tailwind,
-      title: "Tailwind CSS",
-      style: "shadow-sky-400",
-    },
-    {
-      id: 6,
-      src: java,
-      title: "Java",
-      style: "shadow-blue-400",
-    },
-    {
-      id: 7,
-      src: bootstrap,
-      title: "Bootstrap",
-      style: "shadow-[#563d7c]",
-    },
-    {
-      id: 8,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },
-  ];
-
+  
   return (
     <section
       id="skills"

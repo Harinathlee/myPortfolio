@@ -2,60 +2,10 @@ import logo from "../assets/anonymity.png";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-scroll";
+import { links } from "./profile_data";
 
 const NavBar = () => {
 
-  const links = [
-    {
-      id: 2,
-      link_name: "About",
-      link_url: "about",
-      active: false,
-    },
-    {
-      id: 3,
-      link_name: "Experience",
-      link_url: "experience",
-      active: false,
-    },
-    {
-      id: 4,
-      link_name: "expertise",
-      link_url: "skills",
-      active: false,
-    },
-    {
-      id: 5,
-      link_name: "Projects",
-      link_url: "projects",
-      active: false,
-    },
-    {
-      id: 6,
-      link_name: "Academics",
-      link_url: "education",
-      active: false,
-    },
-    {
-      id: 7,
-      link_name: "Testimonials",
-      link_url: "testimonials",
-      active: false,
-    },
-    
-    {
-      id: 8,
-      link_name: "Hobbies",
-      link_url: "hobbies",
-      active: false,
-    },
-    {
-      id: 9,
-      link_name: "Contact",
-      link_url: "contact",
-      active: false,
-    },
-  ];
   const [scrollNav, setScroolNav] = useState(false);
   const changeNav = () => {
     if (window.scrollY >= 80) {

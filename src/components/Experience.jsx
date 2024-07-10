@@ -5,30 +5,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdWorkOutline } from "react-icons/md";
-import wipro from "../assets/wipro.png";
+
+//importing experience details
+import { experienceData } from "./profile_data";
 const Experience = () => {
-  const educationData = [
-    {
-      id: 1,
-      company: "Wipro Technologies, Chennai , India.",
-      job_title: "Project Engineer",
-      job_description: "Java Developer",
-      year: "May 2018 - Present",
-      logo: wipro,
-      responsibilities: [
-        "I am currently working as a senior project engineer in wipro for the client Alight solutions as a Developer support.",
-        "I analyze and update data in a database that is utilised for development purposes.",
-        "Mostly we use own client tools(Upoint) for updating data.When we get huge data it takes too long to update in tooling so we use SQL queries to update it.",
-        "On extra I used to help other teams in migrating code files from SVN to Bitbucket (cloud service).",
-        "I developed a React Progressive Web App(PWA) using HTML, CSS, JS & ReactJS for my team, which creates SQL queries automatically in minutes rather than hours or days when done manually.",
-       "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free."
-      ],
-      achivements: [
-        "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",
-      ],
-    },
-    
-  ];
+  //this state acts as a toggle when we click on the div to show or hide more details
   const [showMore, setShowMore] = useState(false);
   return (
     <section
@@ -48,7 +29,7 @@ const Experience = () => {
         </div>
         {/* verti*/}
         <VerticalTimeline lineColor="#6D67E4">
-          {educationData.map(
+          {experienceData.map(
             ({
               id,
               company,
