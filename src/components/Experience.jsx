@@ -5,31 +5,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { MdWorkOutline } from "react-icons/md";
-import wipro from "../assets/wipro.png";
+
+//importing experience details
+import { experienceData } from "./profile_data";
 const Experience = () => {
-  const educationData = [
-    {
-      id: 1,
-      company: "Wipro Technologies, Chennai , India.",
-      job_title: "Project Engineer",
-      job_description: "Java Developer",
-      year: "May 2018 - Present",
-      logo: wipro,
-      responsibilities: [
-        "I am currently working as a senior project engineer in wipro for the client Alight solutions as a Developer support.",
-        "I analyze and update data in a database that is utilised for development purposes.",
-        "I used to assist other teams in moving code files from SVN to Bitbucket (cloud service).",
-        "Along with this, I worked with a front-end development team to update the UI components.",
-        "With the skills I gained from this team and their guidance, I created a React Progressive Web App (PWA) for my team utilizing HTML, CSS, JS, and ReactJS that generates SQL queries automatically in minutes rather than hours or days when done manually.",
-        "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free.",
-        "Used to manage JIRA tasks and generated a few dashboards to manage the tasks that our team receives.",
-        "I have managed a few projects, provided estimated completion times, and successfully completed them with my team.",
-      ],
-      achivements: [
-        "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",
-      ],
-    },
-  ];
+
   const [showMore, setShowMore] = useState(false);
   return (
     <section
@@ -49,7 +29,7 @@ const Experience = () => {
         </div>
         {/* verti*/}
         <VerticalTimeline lineColor="#6D67E4">
-          {educationData.map(
+          {experienceData.map(
             ({
               id,
               company,
