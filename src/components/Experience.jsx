@@ -9,7 +9,7 @@ import { MdWorkOutline } from "react-icons/md";
 //importing experience details
 import { experienceData } from "./profile_data";
 const Experience = () => {
-  //this state acts as a toggle when we click on the div to show or hide more details
+
   const [showMore, setShowMore] = useState(false);
   return (
     <section
