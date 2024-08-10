@@ -127,7 +127,7 @@ const Contact = () => {
             focus:ring-indigo-200
             focus:ring-opacity-50
           "
-                  placeholder="John cooks"
+                  placeholder="Harinath G"
                   onClick={() => {
                     setMailStatus("Send");
                   }}
@@ -159,7 +159,7 @@ const Contact = () => {
             focus:ring-indigo-200
             focus:ring-opacity-50
           "
-                  placeholder="john.cooks@example.com"
+                  placeholder="harinath.g@example.com"
                   onClick={() => {
                     setMailStatus("Send");
                   }}

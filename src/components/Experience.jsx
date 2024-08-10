@@ -9,7 +9,6 @@ import { MdWorkOutline } from "react-icons/md";
 //importing experience details
 import { experienceData } from "./profile_data";
 const Experience = () => {
-
   const [showMore, setShowMore] = useState(false);
   return (
     <section
@@ -23,8 +22,7 @@ const Experience = () => {
             <span>My </span> <span className="text-blue-400">Experience</span>
           </p>
           <p className="pt-6 text-lg font-Open_Sans">
-            My experiences are listed in chronological order below. Click on an
-            element to learn more about its responsibilities.
+            My experiences are listed in chronological order below.
           </p>
         </div>
         {/* verti*/}
@@ -97,7 +95,11 @@ const Experience = () => {
                       </div>
                     </div>
                   ) : (
-                    <div></div>
+                    <div>
+                      <p className="vertical-timeline-element-subtitle text-gray-600">
+                        Click to know more
+                      </p>
+                    </div>
                   )}
                 </div>
               </VerticalTimelineElement>
