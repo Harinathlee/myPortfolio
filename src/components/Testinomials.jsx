@@ -12,7 +12,6 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { FaQuoteLeft } from "react-icons/fa";
 import alight from "../assets/alight.png";
 import brenda from "../assets/brenda.jpeg";
-import chris from "../assets/chris.jpeg";
 const Testinomials = () => {
   const testimonials_data = [
     {
@@ -25,18 +24,7 @@ const Testinomials = () => {
         "I have enjoyed working with Hari at Alight. He has been flexible with his time to work U.S. daytime hours when we were needing someone to be available. He has very good communication skills. He helped brainstorm and provide alternate suggestions when we were working through some unusual data situations. He is continuing to expand his knowledge and skills regularly.",
         linkedIn: "https://www.linkedin.com/in/harinath-g/details/recommendations/",
       pic: brenda,
-    },
-    {
-      id: 2,
-      name: "Chris Leyland",
-      designation: "Systems Analyst",
-      company: alight,
-      company_name: "ALight Solution",
-      message:
-        " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius magni ab nihil eaque voluptates iste ullam suscipit deserunt officia ad ducimus molestiae dolorem unde sapiente, minima adipisci magnam dolore perferendis Lorem ipsum,",
-      linkedIn: "https://www.linkedin.com/in/chris-leyland-50511721/",
-      pic: chris,
-    },
+    }
   ];
   return (
     <section

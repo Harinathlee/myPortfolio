@@ -12,6 +12,7 @@ import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
 import Testinomials from "./components/Testinomials";
 
+
 export default function App() {
   return (
     <>
