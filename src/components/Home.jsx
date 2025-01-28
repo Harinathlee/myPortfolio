@@ -1,11 +1,14 @@
 import React from "react";
 import Namasthey from "../assets/namaste.png";
 import webdev from "../assets/web-dev.gif";
-import Resume from "../assets/docs/Harinath-Resume.pdf";
 import download from "../assets/download.gif";
 import "../style.css";
 import Typewriter from "typewriter-effect";
+
 const Home = () => {
+  // Your Google Drive link for resume file
+  const googleDriveLink = "https://drive.google.com/uc?export=download&id=1DPvduoTIphqPkFdLfJmQZ1UbF6ii4eCf";
+
   return (
     <section id="home" name="home" className="h-screen w-full">
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-auto md:flex-row pt-14">
@@ -44,8 +47,8 @@ const Home = () => {
           </p>
           <div className="w-auto">
             <a
-              href={Resume}
-              download="Harinath_Resume"
+              href={googleDriveLink}
+              download
               smooth="true"
               duration={500}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-purple-400 to-purple-700 cursor-pointe hover:from-green-700 hover:to-green-400 font-bold hover:scale-105 duration-200 text-lg shadow-lg shadow-black"
