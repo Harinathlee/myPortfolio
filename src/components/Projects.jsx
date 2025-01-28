@@ -30,18 +30,18 @@ const Projects = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500 text-orange-400 font-Roboto">
             <span>My </span> <span className="text-blue-400">Projects</span>
           </p>
-          <p className="pt-6 font-Roboto">
+          <p className="pt-6 font-Open_Sans">
             Check out some of my work right here. To view more click on the
             left/right navigation arrows appearing.It will scroll you to the
             next project. This scroll will be infinite so after last project it
             again shows first project as next one.
           </p>
-          <p className="pt-2 font-Roboto">
+          <p className="pt-2 font-Open_Sans">
             Click on "Live" button to visit the hosted website of the project,
             click on "Code" button to visit the GitHub repository of the
             project.
           </p>
-          <p className="pt-2 font-Roboto">
+          <p className="pt-2 font-Open_Sans">
             You can double click on the project card to flip and see the short
             description and benifites of the project. Double click again will
             flip it back.
@@ -69,7 +69,7 @@ const Projects = () => {
           </div>
         </Swiper>
       </div>
-    </section>
+    </section> 
   );
 };
 
