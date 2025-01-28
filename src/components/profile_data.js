@@ -93,21 +93,66 @@ export const links = [
 export const experienceData = [
   {
     id: 1,
-    company: "Wipro Technologies, Chennai , India.",
-    job_title: "Project Engineer",
-    job_description: "Java Developer",
+    company: "Wipro Technologies, Bengaluru , India.",
+    job_title: "Senior Project Engineer",
+    job_description: "Front-End React Developer",
     year: "May 2018 - Present",
     logo: wipro,
-    responsibilities: [
-      "I analyze and update data in a database used for development.",
-      "For the majority of data updates, we use our client tools (Upoint). When we receive large volumes of data, updating it in tools takes too long, so we use SQL queries to update it.",
-      "I did find solutions to do the manual work 30% faster than previous regular methods",
-      "My work hours were 100%  flexible, and I used to assist other teams in moving code files from SVN to Bitbucket (cloud service).",
-      "Later on, I started working with the front-end development team to update the UI components.",
-      "The majority of my job here entails performing feature-level release upgrades by changing UI components and adding tiny features such as buttons, navigation, and so on.",
-      "Move data to higher life cycles using Jenkins jobs on a monthly release basis.",
-      "I developed a React Progressive Web App (PWA) using HTML, CSS, JS & ReactJS for my team, which creates SQL queries automatically in minutes rather than hours or days when done manually.",
-      "This tool enabled our team to produce queries 90% quicker and update data nearly 100% error-free.",
+    responsibilities: 
+      [
+        {
+          "category": "Development Expertise",
+          "points": [
+            {
+              "title": "Micro-Frontend Development",
+              "description": "Collaborated with the team to develop micro-frontends using React components, enhancing the modularity and scalability of the applications."
+            },
+            {
+              "title": "Redux Toolkit",
+              "description": "Utilized the Redux toolkit to handle global states and API calls, ensuring efficient state management and data flow."
+            }
+          ]
+        },
+        {
+          "category": "Process Improvement & Collaboration",
+          "points": [
+            {
+              "title": "Feature-Level Release Upgrades",
+              "description": "Performed feature-level release upgrades by changing UI components and adding new features such as buttons, navigation, etc., to improve the user experience."
+            },
+            {
+              "title": "AI Integration",
+              "description": "Leveraged advanced AI tools to accelerate development and productivity, staying ahead of technology trends."
+            },
+            {
+              "title": "Unit Testing and Debugging",
+              "description": "Involved in developing, unit testing, troubleshooting, and debugging applications to maintain high-quality code and functionality."
+            }
+          ]
+        },
+        {
+          "category": "Client Interaction",
+          "points": [
+            {
+              "title": "Business Requirement Gathering",
+              "description": "Interfaced with clients for business requirement gathering and obtained a clear view of their requirements, ensuring project alignment with client expectations."
+            }
+          ]
+        },
+        {
+          "category": "Recent Accomplishments",
+          "points": [
+            {
+              "title": "React PWA Development",
+              "description": "Created a React Progressive Web App (PWA) using HTML, CSS, JavaScript, and ReactJS that generates SQL queries automatically in minutes rather than hours or days when done manually. This tool enabled the team to produce queries 90% quicker and update data nearly 100% error-free."
+            },
+            {
+              "title": "PEGA to React Migration",
+              "description": "Played a key role in a pilot team at Ford to migrate PEGA screens from their warranty application to React application screens."
+            }
+          ]
+        }
+            
     ],
     achivements: [
       "Because of my passion for web development, I created a project for my team that generates SQL queries automatically in minutes rather than hours or days while doing it manually.",
